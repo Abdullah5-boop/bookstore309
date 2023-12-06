@@ -1,7 +1,6 @@
 <?php
 echo"hello world";
 echo "This is asif";
-
-echo "AAAAAAAAAAAAAAA"
+echo "hello world asifvbvnbnv  "
 
 ?>
