@@ -1,4 +1,4 @@
 <?php
 echo"hello world";
-echo "This is main"
+echo "This is asif"
 ?>
