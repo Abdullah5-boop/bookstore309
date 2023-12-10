@@ -133,7 +133,7 @@ $conn->close();
 		</main>
 	</div>
 	<footer>
-		<p>&copy; 2023 Book Store. All rights reserved.</p>
+		<p>&copy; 2023 Book Store. All rights reserved......</p>
 		<div class="socialMedia">
 			<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
 			<a href="#"><i class="fa-brands fa-twitter"></i></a>
