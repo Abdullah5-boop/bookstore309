@@ -67,7 +67,9 @@
 
                     <div>Home</div>
                     <div>about</div>
-                    <div>contact</div>
+                    <div>
+                        <a href="./asif.php">contact</a>
+                    </div>
 
                     <?php
                     session_start();
@@ -196,7 +198,7 @@
                             
                             </div>
                         </div>
-                        <input type="hidden" name="inputdata" value='.$bookid.'> <br>
+                        <input type="hidden" name="inputdata" value=' . $bookid . '> <br>
                         </form>
                             
                             ';
