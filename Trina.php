@@ -108,7 +108,7 @@
 
                     </textarea>
                     <span class="right-container-arrow"></span>
-                    <input type="submit" class="submit-button">Submit button</input>
+                    <input type="submit" class="submit-button">Submit button 1</input>
                 </div>
             </div>
         </form>
