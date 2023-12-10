@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bookstore";
+
 
 // Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -143,3 +140,10 @@ $conn->close();
 	</footer>
 </body>
 </html>
+=======
+echo"hello world";
+echo "This is asif";
+echo "hello world asifvbvnbnv  ";
+echo " aaaaaaaaaa"
+?>
+>>>>>>> 5ce1e9fa0101b099902b6fdf8fc6fd6588ec9c8e
