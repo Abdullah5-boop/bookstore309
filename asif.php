@@ -1,4 +1,11 @@
 <?php
+<<<<<<< HEAD
+echo"hello world";
+echo "This is asif";
+echo "hello world asif "
+
+?>
+=======
 
 $conn = new mysqli('localhost', 'root', '', 'bookstore309');
 // Create a connection to the database
@@ -147,3 +154,4 @@ echo "hello world asifvbvnbnv  ";
 echo " aaaaaaaaaa"
 ?>
 >>>>>>> 5ce1e9fa0101b099902b6fdf8fc6fd6588ec9c8e
+>>>>>>> main
