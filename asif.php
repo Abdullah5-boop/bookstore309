@@ -1,8 +1,8 @@
 <?php
 
-
+$conn = new mysqli('localhost', 'root', '', 'bookstore309');
 // Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
+// $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check the connection
 if ($conn->connect_error) {

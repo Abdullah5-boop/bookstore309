@@ -15,6 +15,7 @@
         $con = new mysqli('localhost', 'root', '', 'bookstore309');
 
         $value=$_GET['inputdata'];
+       
         $sql = "SELECT * FROM book WHERE bookid= '$value' ";
         $result= mysqli_query($con,$sql);
         $newresult=mysqli_fetch_assoc($result);
@@ -45,7 +46,10 @@
         ?>
     
 
+<?php
+include './anindita.php';
 
+?>
 
 
     </div>

@@ -35,15 +35,20 @@
 
             <?php
             $con = new mysqli('localhost', 'root', '', 'bookstore309');
-            if (isset($_GET['cmnttext'])) {
-                $value = $_GET['cmnttext'];
-                $sql = "  SELECT * FROM `review` ";
+     
+            
+         
+            $value=$_GET['inputdata'];
+
+
+                $sql = " SELECT * FROM review WHERE Bookid =   $value ";
                 $result = mysqli_query($con, $sql);
                 while ($row = mysqli_fetch_assoc($result)) {
                     $content = $row['reviewcontent'];
-
+                
                     echo '
-                    
+                    </br>
+                    </br>
                     <div class="box">
                     <div class="box-top">
                
@@ -77,7 +82,7 @@
                     
                     ';
                 }
-            }
+            
             ?>
 
 
