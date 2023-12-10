@@ -8,7 +8,7 @@
 
 body
 {
-    background: #55638e;
+    /* background: #55638e; */
 }
 
 
@@ -19,7 +19,7 @@ body
     align-items: center;
     height: 10vh; 
     text-align: center;
-    color: #fff;
+    color: #0e0e0e;
 }
 
 

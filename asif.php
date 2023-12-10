@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD
-echo"hello world";
-echo "This is asif";
-echo "hello world asif "
 
-?>
-=======
+
 
 $conn = new mysqli('localhost', 'root', '', 'bookstore309');
 // Create a connection to the database
@@ -23,7 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = $_POST["message"];
 
     // Prepare and execute the SQL query to insert data into the database
-    $sql = "INSERT INTO bookstore1 (name,phone, email, message) VALUES ('$name','$phone','$email', '$message')";
+    $sql = "INSERT INTO `conactus`( `cname`, `cphone`, `cemail`, `cmsg`)
+	
+	
+	
+	VALUES ('$name','$phone','$email', '$message')";
    
 
     if ($conn->query($sql) === TRUE) {
@@ -116,7 +115,7 @@ $conn->close();
 
 				<div class="contact-form">
 					<h1>Contact Me</h1>
-					<form action="index.php" method="post">
+					<form action="asif.php" method="post">
 						<label for="name">Name:</label>
 						<input type="text" id="name" name="name" required>
 						<label for="Phone">Phone Number:</label>
@@ -153,5 +152,4 @@ echo "This is asif";
 echo "hello world asifvbvnbnv  ";
 echo " aaaaaaaaaa"
 ?>
->>>>>>> 5ce1e9fa0101b099902b6fdf8fc6fd6588ec9c8e
 >>>>>>> main
