@@ -11,7 +11,7 @@
 <body>
 
     <div class="max-w-[70vw] m-auto mt-20">
-        <h1 class="text-3xl font-bold font-mono">Suggestion box</h1>
+        <h1 class="text-3xl font-bold font-mono">contact box</h1>
 
         <div class="relative overflow-x-auto my-10">
 
@@ -22,14 +22,18 @@
                             contact ID
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Suggestion
+                            Contact Name
                         </th>
                         <th scope="col" class="px-6 py-3">
-
+                            contact Phone
                         </th>
-                        <th scope="col" class="px-6 py-3"></th>
-                        <th scope="col" class="px-6 py-3"></th>
-                        <!-- <th scope="col" class="px-6 py-3"></th> -->
+                        <th scope="col" class="px-6 py-3">
+                            contact email
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            contact message
+                        </th>
+                      
 
                     </tr>
                 </thead>
@@ -37,12 +41,15 @@
 
                     <?php
                     $con = new mysqli('localhost', 'root', '', 'bookstore309');
-                    $sql = "SELECT * FROM `suggestion`";
+                    $sql = "SELECT * FROM `conactus` ";
                     $result = mysqli_query($con, $sql,);
                     if ($result) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $id = $row['sid'];
-                            $text= $row['suggestion'];
+                            $id = $row['contactID'];
+                            $cname = $row['cname'];
+                            $cphone= $row['cphone'];
+                            $cemail= $row['cemail'];
+                            $cmsg= $row['cmsg'];
                             echo '
                             
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -50,8 +57,19 @@
                                '.$id.'
                             </th>
                             <td class="px-6 py-4">
-                               '.$text.'
+                               '.  $cname  .'
                             </td>
+                            <td class="px-6 py-4">
+                               '.    $cphone  .'
+                            </td>
+                            <td class="px-6 py-4">
+                               '.  $cemail .'
+                            </td>
+                            <td class="px-6 py-4">
+                               '.  $cmsg .'
+                            </td>
+                          
+                          
     
     
                         </tr>
