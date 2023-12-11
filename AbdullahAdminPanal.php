@@ -59,7 +59,7 @@ if (!$con) {
             </div>
             <div class="text-2xl m-auto font-bold font-mono">
                 <h1>Name : abc</h1>
-                <h1>Total Book: 10</h1>
+                <h1>Total Book: 1</h1>
                 <h1>contibution: 10</h1>
                 <h1>social: link</h1>
                 <h1>Total Book: 10</h1>
@@ -139,7 +139,7 @@ if (!$con) {
                     </div>
                     <div class="w-full px-3">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Author
+                            Author 
                         </label>
                         <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="" type="" placeholder="" name="author">
 
