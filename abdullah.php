@@ -104,6 +104,7 @@
         <div class="w-[100%] h-[80vh] bg-blue-700  banner">
             <div class="">
                 <h1 class="text-15xl font-mono">Hello this is for banner</h1>
+                <h1>welcome to our shop</h1>
             </div>
         </div>
 
