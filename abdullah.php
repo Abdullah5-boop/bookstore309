@@ -36,11 +36,25 @@
         .btn-holder {
             border-radius: 30px;
         }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            width: 100%;
+            height: 65vh;
+            
+            font-size: clamp(50px, 10vw, 110px);
+            color: whitesmoke;
+            background: linear-gradient(225deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.7679446778711485) 32%, rgba(9, 9, 120, 0.7091211484593838) 48%, rgba(118, 7, 201, 0.21612394957983194) 100%), url('https://source.unsplash.com/woman-finding-some-book-to-read-mbKApJz6RSU');
+            background-size: cover;
+        }
     </style>
 </head>
 
 <body>
-    <section>
+    <section class=" font-mono">
         <?php
         $con = new mysqli('localhost', 'root', '', 'bookstore309');
         if (!$con) {
@@ -63,7 +77,7 @@
             <nav class="flex pl-24  pr-10  text-2xl bg-black text-white h-[80px] border py-5   ">
 
                 <div>Logo</div>
-                <div class="flex justify-between ml-auto bg-red-500 w-[65%]">
+                <div class="flex justify-between ml-auto w-[50%]">
 
                     <div>Home</div>
                     <div>about</div>
@@ -78,7 +92,7 @@
                     } else {
 
                         echo '
-                        <div ><a href="./userprofile.php">profile hi</a></div>
+                        <div ><a href="./userprofile.php">profile</a></div>
                         ';
                     }
 
@@ -87,8 +101,9 @@
 
             </nav>
         </div>
-        <div class="w-[100%] h-[80vh] bg-red-700">
+        <div class="w-[100%] h-[80vh] bg-blue-700  banner">
             <div class="">
+                <h1 class="text-15xl font-mono">Hello this is for banner</h1>
                 <h1>welcome to our shop</h1>
             </div>
         </div>
@@ -96,7 +111,7 @@
         <div class="mb-10">
             <h1 class="pl-24 text-3xl font-bold text-center my-14 underline">Book store</h1>
             <div class="w-[70vw] h-[100vh] m-auto  store   ">
-                <div class=" grid grid-cols-3 gap-3  bg-red-600	">
+                <div class=" grid grid-cols-3 gap-3  ">
                     <!-- <div class="border card flex flex-col pb-5    ">
                         <div class="card-img-container">
                             <img src="https://source.unsplash.com/pile-of-assorted-title-books-xY55bL5mZAM" alt="">
@@ -214,14 +229,15 @@
                 </div>
             </div>
         </div>
-        <div class=" bg-blue-900 h-[15vh]">
-            <h1>
-                hello world
-            </h1>
+        <div class=" h-[15vh]">
 
+        </div>
+        <div>
+            <?php
 
-
-
+            include './Trina.php';
+            include './Footer.php'
+            ?>
         </div>
     </section>
 
