@@ -64,9 +64,28 @@ if (!$con) {
                 <h1>social: link</h1>
                 <h1>Total Book: 10</h1>
             </div>
+            <section class="flex justify-center w-[100%]">
+                <div>
+                    <form class="" action="./suggetionbox.php">
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" value="contact">
+
+                    </form>
+                </div>
+                <div>
+                    <form class="" action="./complain.php">
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" value="complain">
+                    </form>
+                </div>
+                <div>
+                    <form class="" action="contactadmin.php">
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" value="contact">
+                    </form>
+                </div>
+
+            </section>
         </div>
         <div class="flex justify-center">
-            
+
             <?php
             if (isset($_GET['bookname'])) {
                 $bookname = $_GET['bookname'];
@@ -97,8 +116,7 @@ if (!$con) {
             <span class="font-semibold mr-2 text-left flex-auto">New Data is not inserted</span>
             <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
           </div>
-        </div>'
-        ;
+        </div>';
                 }
             } else {
 
@@ -161,7 +179,7 @@ if (!$con) {
 
 
         <div class="">
-        <!-- <div class="m-auto">
+            <!-- <div class="m-auto">
             <div class="w-[50vw] h-[15vh] m-auto border  flex my-5 ">
                 <div class="profile-card-img-container">
                     <img src="https://i.ibb.co/zPYcrFL/avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg" alt="">
@@ -178,19 +196,19 @@ if (!$con) {
             </div>
 
         </div> -->
-        <?php
-        // $con = new mysqli('localhost', 'root', '', 'bookstore309');
-        $sql = "SELECT `Name`, `price`, `author`, `totalsell`, `photourl`, `demo` FROM `book`";
-        $result = mysqli_query($con, $sql);
-        if ($result) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $price = $row['price'];
-                $Name = $row['Name'];
-                $author = $row['author'];
-                $totalsell = $row['totalsell'];
-                $photourl = $row['photourl'];
-                // echo "$price - $Name- $author -   $totalsell -  $photourl </br>";
-                echo '
+            <?php
+            // $con = new mysqli('localhost', 'root', '', 'bookstore309');
+            $sql = "SELECT `Name`, `price`, `author`, `totalsell`, `photourl`, `demo` FROM `book`";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $price = $row['price'];
+                    $Name = $row['Name'];
+                    $author = $row['author'];
+                    $totalsell = $row['totalsell'];
+                    $photourl = $row['photourl'];
+                    // echo "$price - $Name- $author -   $totalsell -  $photourl </br>";
+                    echo '
                 
                 <div class="m-auto">
                 <div class="w-[50vw] h-[15vh] m-auto border  flex my-5 ">
@@ -211,12 +229,12 @@ if (!$con) {
             </div>
                 
                 ';
+                }
+            } else {
+                echo "not done";
             }
-        } else {
-            echo "not done";
-        }
-        ?>
-</div>
+            ?>
+        </div>
     </div>
 </body>
 <!-- <script src="./AbdullahAdminPanal.js"></script> -->

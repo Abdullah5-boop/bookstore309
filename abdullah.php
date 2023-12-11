@@ -89,7 +89,7 @@
         </div>
         <div class="w-[100%] h-[80vh] bg-red-700">
             <div class="">
-                <h1>Hello this is for banner</h1>
+                <h1>welcome to our shop</h1>
             </div>
         </div>
 
