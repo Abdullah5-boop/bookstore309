@@ -18,6 +18,7 @@
 
 <body>
     <section id="review">
+ 
 
         <form action="" method="GET">
             <div class="reviewinput">
@@ -25,6 +26,9 @@
                 <input class="btn-type" type="submit">
             </div>
         </form>
+
+
+
         <div class="review-heading">
             <span>Reviews</span>
             <h1>Client Says</h1>
@@ -38,7 +42,6 @@
      
             
          
-            $value=$_GET['inputdata'];
 
 
                 $sql = " SELECT * FROM review WHERE Bookid =   $value ";
@@ -75,7 +78,7 @@
                     <div class="client-cmnt">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident
                             temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur
-                            voluptates incidunt blanditiis sed atque cumque.</p>
+                            voluptates incidunt blanditiis sed atque cumque '.$content.'.</p>
                     </div>
                 </div>
                     

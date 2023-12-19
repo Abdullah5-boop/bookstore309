@@ -7,13 +7,14 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+     
         .store {
             /* border: 2px solid; */
         }
 
         .card {
-            width: 410px;
-            height: 495px;
+            width: 310px;
+            height: 395px;
 
             border-radius: 20px;
             object-fit: cover;
@@ -50,6 +51,9 @@
             background: linear-gradient(225deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.7679446778711485) 32%, rgba(9, 9, 120, 0.7091211484593838) 48%, rgba(118, 7, 201, 0.21612394957983194) 100%), url('https://source.unsplash.com/woman-finding-some-book-to-read-mbKApJz6RSU');
             background-size: cover;
         }
+        nav{
+            overflow: auto;
+        }
     </style>
 </head>
 
@@ -74,16 +78,15 @@
         ?>
         <div>
 
-            <nav class="flex pl-24  pr-10  text-2xl bg-black text-white h-[80px] border py-5   ">
+            <nav class="flex p-0 lg:pl-24  lg:pr-10  text-2xl bg-black text-white h-[80px] border py-5   ">
 
                 <div>Logo</div>
-                <div class="flex justify-between ml-auto w-[50%]">
+                <div class="flex justify-between ml-auto w-[30%]">
 
-                    <div>Home</div>
-                    <div>about</div>
-                    <div>
-                        <a href="./asif.php">contact</a>
-                    </div>
+           
+                    <div><a href="./asif.php">contact</a></div>
+                    <div><a href="./Trina.php">suggestion</a></div>
+                    <div><a href="./ABdullahLoginpage.php">login</a></div>
 
                     <?php
                     session_start();
@@ -111,7 +114,7 @@
         <div class="mb-10">
             <h1 class="pl-24 text-3xl font-bold text-center my-14 underline">Book store</h1>
             <div class="w-[70vw] h-[100vh] m-auto  store   ">
-                <div class=" grid grid-cols-3 gap-3  ">
+                <div class=" grid grid-cols-1 lg:grid-cols-3 gap-3  ">
                     <!-- <div class="border card flex flex-col pb-5    ">
                         <div class="card-img-container">
                             <img src="https://source.unsplash.com/pile-of-assorted-title-books-xY55bL5mZAM" alt="">
@@ -189,7 +192,7 @@
 
                             echo '
                             <form method="GET" action="BookProfile.php">
-                            <div class="border card flex flex-col pb-5    ">
+                            <div class="border card flex flex-col pb-5   mt-10 ">
                             <div class="card-img-container">
                                 <img src=' . $url . ' alt="">
                             </div>
@@ -232,10 +235,10 @@
         <div class=" h-[15vh]">
 
         </div>
-        <div>
+        <div >
             <?php
 
-            include './Trina.php';
+    
             include './Footer.php'
             ?>
         </div>
