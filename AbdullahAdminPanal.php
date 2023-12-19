@@ -53,7 +53,7 @@ if (!$con) {
 
 <body>
     <div>
-        <div class="w-[50vw] h-[50vh] m-auto  grid grid-cols-2 justify-items-center content-center">
+        <div class="w-100 lg:w-[50vw] lg:h-[50vh] m-auto grid-cols-1  lg:grid grid-cols-2 justify-items-center content-center">
             <div class="addmin-profile-imgcontainer">
                 <img src="https://i.ibb.co/zPYcrFL/avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg" alt="">
             </div>
@@ -67,7 +67,7 @@ if (!$con) {
             <section class="flex justify-center w-[100%]">
                 <div>
                     <form class="" action="./suggetionbox.php">
-                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" value="contact">
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" value="suggestion">
 
                     </form>
                 </div>
@@ -97,7 +97,7 @@ if (!$con) {
                 $sql = "INSERT INTO `book`(`Name`, `price`, `author`, `totalsell`, `photourl`, `demo`)
                  VALUES ('$bookname','$price','$author','$totalsell','$purl','-')";
                 $result = mysqli_query($con, $sql);
-                // $result=false;
+         
                 if ($result) {
                     echo '
                     <div class="bg-indigo-700 text-center py-4 lg:px-4 absolute top-0 ">
@@ -116,6 +116,7 @@ if (!$con) {
             <span class="font-semibold mr-2 text-left flex-auto">New Data is not inserted</span>
             <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
           </div>
+          
         </div>';
                 }
             } else {
@@ -139,7 +140,7 @@ if (!$con) {
                     </div>
                     <div class="w-full px-3">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Author 
+                            Author
                         </label>
                         <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="" type="" placeholder="" name="author">
 
@@ -198,7 +199,7 @@ if (!$con) {
         </div> -->
             <?php
             // $con = new mysqli('localhost', 'root', '', 'bookstore309');
-            $sql = "SELECT `Name`, `price`, `author`, `totalsell`, `photourl`, `demo` FROM `book`";
+            $sql = "SELECT `bookid`,`Name`, `price`, `author`, `totalsell`, `photourl`, `demo` FROM `book`";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -207,11 +208,12 @@ if (!$con) {
                     $author = $row['author'];
                     $totalsell = $row['totalsell'];
                     $photourl = $row['photourl'];
+                    $bookid    = $row['bookid'];
                     // echo "$price - $Name- $author -   $totalsell -  $photourl </br>";
                     echo '
                 
                 <div class="m-auto">
-                <div class="w-[50vw] h-[15vh] m-auto border  flex my-5 ">
+                <div class="w-100 lg:w-[50vw] h-[15vh] m-auto border  flex my-5 ">
                     <div class="profile-card-img-container">
                         <img src=' . $photourl . ' alt="">
                     </div>
@@ -221,12 +223,30 @@ if (!$con) {
                         <h1>total sell : ' . $totalsell . '</h1>
                     </div>
                     <div class="ml-auto flex items-center">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">delete</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">update</button>
+                      
                     </div>
+                    <div class="flex items-center">
+             
+                    <form action="./cardupdate.php">
+                    <input type="hidden" name="inputdata" value=' . $bookid . '>
+                    <input type="submit" value="update" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    </form>
+
+
+                    <form action="./deletecard.php">
+                    <input type="hidden" name="inputdata" value=' . $bookid . '>
+                    <input type="submit" value="Delete" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    </form>
+                    
+                    
+                    
+                 
+                    
+                </div>
                 </div>
     
             </div>
+            </
                 
                 ';
                 }
@@ -238,5 +258,9 @@ if (!$con) {
     </div>
 </body>
 <!-- <script src="./AbdullahAdminPanal.js"></script> -->
+
+<!-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">delete</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">update</button> -->
+
 
 </html>
